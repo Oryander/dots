@@ -10,7 +10,7 @@
 	<!-- Theme -->
 	<Include>$HOME/.config/jwm/theme</Include>
     <!-- Options for program groups. -->
-    <Include>$HOME/.config/jwm/groups</Include>
+    <Include>exec:$HOME/.config/jwm/groupgen</Include>
     <!-- Trays -->
     <Include>$HOME/.config/jwm/trays</Include>
     <!-- Virtual Desktops -->

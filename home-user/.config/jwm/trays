@@ -18,12 +18,13 @@
         <Clock format="%l:%M %p"><Button mask="123">exec:xclock</Button></Clock>
     </Tray>
     <Tray x="0" y="-1" autohide="on" delay="1000" halign="center" valign="top" height="30">
-		    <TrayButton icon="amarok-icon-jwm.png" popup="LibreWolf web browser">
-			    exec:/home/oryander/safe-launch-librewolf.sh
-		    </TrayButton>
-		    <TrayButton icon="firefox-4.0-jwm.png" popup="Firefox web browser">exec:firefox</TrayButton>
+		<TrayButton icon="amarok-icon-jwm.png" popup="LibreWolf web browser">
+			exec:/home/oryander/safe-launch-librewolf.sh
+		</TrayButton>
+		<TrayButton icon="firefox-4.0-jwm.png" popup="Firefox web browser">exec:firefox</TrayButton>
         <TrayButton icon="gnome-boxes-jwm.png" popup="Gnome boxes">exec:gnome-boxes</TrayButton>
         <!-- Run VSCodium from a custom script -->
-		    <TrayButton icon="vscodium.png" popup="VSCodium">exec:vscodium</TrayButton>
+		<TrayButton icon="vscodium.png" popup="VSCodium">exec:vscodium</TrayButton>
+		<TrayButton icon="multimc-jwm.png" popup="MultiMC">exec:multimc</TrayButton>
     </Tray>
 </JWM>

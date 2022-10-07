@@ -32,4 +32,8 @@
         <Name>Alacritty</Name>
         <Option>icon:alacritty-jwm.png</Option>
     </Group>
+    <Group>
+    	<Name>MultiMC</Name>
+    	<Option>icon:multimc-jwm.png</Option>
+    </Group>
 </JWM>
