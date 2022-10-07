@@ -1,0 +1,21 @@
+map x cut
+map c copy
+map C clear
+map v paste
+map g top
+
+map <delete> delete
+map e cd /home/oryander/
+map E cd /
+map <c-e> cd /usr/
+map . cd .config
+map <c-q> quit
+
+map <c-g> half-up
+map <c-f> half-down
+
+map H set hidden!
+
+set previewer ~/.config/lf/pv.sh
+
+cmd open $v run ~/.config/lf/opener.vsh $f

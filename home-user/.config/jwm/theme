@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<JWM>
+	<!-- Current theme mimics https://colorhunt.co/palette/1b243051557e816797d6d5a8 -->
+	<!-- The move mode (outline or opaque) -->
+	<MoveMode>opaque</MoveMode>
+	
+	<!-- The resize mode (outline or opaque) -->
+	<ResizeMode>opaque</ResizeMode>
+
+	<!-- Icons to use instead of defaults -->
+	<ButtonClose>/usr/share/icons/Mint-Y-Dark/actions/22/window-close-jwm.png</ButtonClose>
+	
+	<!-- Window Style -->
+	<!-- Not 100% sure if font is working -->
+    <WindowStyle decorations="flat">
+        <Font>Ubuntu-Regular:bold</Font>
+        <Width>4</Width>
+        <Corner>0</Corner>
+        <Foreground>#D6D5A8</Foreground>
+        <Background>#1B2430</Background>
+        <Opacity>1.0</Opacity>
+        <Active>
+            <Foreground>#D6D5A8</Foreground>
+            <Background>#1B2430</Background>
+            <Outline>#D6D5A8</Outline>
+            <Opacity>1.0</Opacity>
+        </Active>
+    </WindowStyle>
+    
+    <!-- Tray Style -->
+    <TrayStyle decorations="motif">
+        <Font>Sans-12</Font>
+        <Background>#1B2430</Background>
+        <Foreground>#D6D5A8</Foreground>
+        <Opacity>0.95</Opacity>
+    </TrayStyle>
+    
+    <!-- Task List Style -->
+    <TaskListStyle list="desktop" group="true">
+      <Font>Ubuntu-Regular</Font>
+      <Active>
+        <Foreground>#D6D5A8</Foreground>
+        <Background>#51557E</Background>
+      </Active>
+      <Foreground>#D6D5A8</Foreground>
+      <Background>#816797</Background>
+    </TaskListStyle>
+    
+    <!-- Pager Style -->
+    <PagerStyle>
+        <Foreground>#51557E</Foreground>
+        <Background>#1B2430</Background>
+        <Active>
+            <Foreground>#D6D5A8</Foreground>
+            <Background>#51557E</Background>
+        </Active>
+    </PagerStyle>
+    
+    <!-- Menu Style -->
+    <MenuStyle decorations="motif">
+        <Font>Ubuntu-Regular</Font>
+        <Foreground>#D6D5A8</Foreground>
+        <Background>#1B2430</Background>
+        <Outline>#816797</Outline>
+        <Active>
+            <Foreground>#D6D5A8</Foreground>
+            <Background>#1B2430</Background>
+        </Active>
+    </MenuStyle>
+    
+    <!-- Popup Style -->
+    <PopupStyle>
+        <Font>Ubuntu-Regular</Font>
+        <Foreground>#D6D5A8</Foreground>
+        <Background>#1B2430</Background>
+    </PopupStyle>
+    
+</JWM>

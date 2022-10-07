@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<JWM>
+    <Include>exec: v run /home/oryander/.config/jwm/keygen.vsh</Include>
+    <!-- 
+	<Key key="Up">up</Key>
+    <Key key="Down">down</Key>
+    <Key key="Right">right</Key>
+    <Key key="Left">left</Key>
+    <Key key="h">left</Key>
+    <Key key="j">down</Key>
+    <Key key="k">up</Key>
+    <Key key="l">right</Key>
+    <Key key="Return">select</Key>
+    <Key key="Escape">escape</Key> 
+
+    <Key mask="A" key="Tab">nextstacked</Key>-->
+    <Key mask="A" key="F4">close</Key>
+    <Key mask="A" key="#">desktop#</Key>
+    <Key mask="A" key="F1">root:1</Key>
+    <Key mask="A" key="F2">window</Key>
+    <Key mask="A" key="x">close</Key>
+    <Key mask="A" key="m">minimize</Key>
+    <Key mask="A" key="v">maximize</Key>
+    <Key mask="A" key="Right">rdesktop</Key>
+    <Key mask="A" key="Left">ldesktop</Key>
+    <Key mask="A" key="Up">udesktop</Key>
+    <Key mask="A" key="Down">ddesktop</Key>
+
+	<Key mask="A" keycode="133">exec:rofi -show drun</Key>
+    <!-- Super (4) -->
+	<Key mask="4" key="d">exec:rofi -show drun</Key>
+	<Key mask="4" key="r">exec:rofi -show run</Key>
+	<Key mask="4" key="e">exec:alacritty -e lf</Key>
+	<Key mask="4" key="c">exec:alacritty</Key>
+	<Key mask="4" key="b">exec:alacritty -e btop</Key>
+	<Key mask="4" key="f">exec:firefox</Key>
+
+	<!-- Super + Alt -->
+	<Key mask="4A" key="Right">sendr</Key>
+	<Key mask="4A" key="Left">sendl</Key>
+	<Key mask="4A" key="Up">sendu</Key>
+	<Key mask="4A" key="Down">sendd</Key>
+
+	<!-- Ctrl -->
+	<Key mask="C" key="Tab">exec:rofi -show window</Key>
+
+	<Key mask="C" keycode="133">root:2</Key>
+
+	<!-- Ctrl + Alt -->
+	<Key mask="CA" key="a">exec:pulseaudio --kill</Key>
+	<Key mask="CA" key="r">restart</Key>
+
+	<!-- Ctrl + Shift -->
+	<Key mask="CS" key="q">exec:rofi -show power</Key>
+</JWM>

@@ -1,0 +1,10 @@
+{
+    "Alt-/": "lua:comment.comment",
+    "CtrlUnderscore": "lua:comment.comment",
+    "Ctrl-z": "Undo",
+    "Ctrl-y": "Redo",
+    "Ctrl-s": "Save",
+    "Ctrl-q": "Quit",
+    "Ctrl-g": "CursorPageDown",
+    "Ctrl-space": "CursorPageUp"
+}

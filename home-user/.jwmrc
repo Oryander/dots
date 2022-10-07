@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<JWM>
+	<StartupCommand>bash $HOME/.config/jwm/startup</StartupCommand>
+	<RestartCommand>bash $HOME/.config/jwm/startup</RestartCommand>
+	<ShutdownCommand>killall picom</ShutdownCommand>
+
+	<Include>$HOME/.config/jwm/menus</Include>
+	<!-- Key bindings -->
+	<Include>exec:$HOME/.config/jwm/keygen</Include>
+	<!-- Theme -->
+	<Include>$HOME/.config/jwm/theme</Include>
+    <!-- Options for program groups. -->
+    <Include>$HOME/.config/jwm/groups</Include>
+    <!-- Trays -->
+    <Include>$HOME/.config/jwm/trays</Include>
+    <!-- Virtual Desktops -->
+    <Include>$HOME/.config/jwm/desktops</Include>
+    <!-- Mouse bindings -->
+    <Include>$HOME/.config/jwm/mouse</Include> 
+
+    <!-- The focus model (sloppy or click) -->
+    <FocusModel>click</FocusModel>
+
+    <!-- Path where icons can be found.
+         IconPath can be listed multiple times to allow searching
+         for icons in multiple paths.
+      -->
+    <IconPath>/usr/local/share/icons/Tango/scalable/actions</IconPath>
+    <IconPath>/usr/local/share/icons/Tango/scalable/apps</IconPath>
+    <IconPath>/usr/local/share/icons/Tango/scalable/places</IconPath>
+    <IconPath>/usr/local/share/icons/Tango/scalable/status</IconPath>
+    <IconPath>/usr/local/share/icons/Tango/scalable/mimetypes</IconPath>
+    <IconPath>/usr/local/share/jwm</IconPath>
+    <IconPath>/usr/share/icons/hicolor/32x32/apps</IconPath>
+    <IconPath>/usr/share/icons/Numix-Circle/48/apps</IconPath>
+    <IconPath>/usr/share/icons/Numix-Circle/24/panel</IconPath>
+
+    <!-- The snap mode (none, screen, or border) -->
+    <SnapMode distance="10">border</SnapMode>
+
+	<!-- Must be last -->
+	<!-- Breaks things on restart -->
+    <!-- <ShutdownCommand>exec:killall picom<ShutdownCommand> -->
+    
+</JWM>

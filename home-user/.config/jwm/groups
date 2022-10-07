@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<JWM>
+	<!-- Name/class can be found by running 
+    	xprop | grep "WM_CLASS" 
+    	and clicking on a window -->
+    <Group>
+        <Option>tiled</Option>
+    </Group>
+    <Group>
+        <Name>xclock</Name>
+        <Option>drag</Option>
+        <Option>notitle</Option>
+    </Group>
+    <Group>
+    	<Class>librewolf-default</Class>
+    	<Option>icon:amarok-icon-jwm.png</Option>
+    </Group>
+    <Group>
+    	<Class>firefox</Class>
+    	<Option>icon:firefox-4.0-jwm.png</Option>
+    </Group>
+    <Group>
+    	<Name>Navigator</Name>
+    	<Option>noborder</Option>
+    	<Option>aerosnap</Option>
+    </Group>
+    <Group>
+    	<Name>pix</Name>
+    	<Option>icon:pix-jwm.png</Option>
+    </Group>
+    <Group>
+        <Name>Alacritty</Name>
+        <Option>icon:alacritty-jwm.png</Option>
+    </Group>
+</JWM>
