@@ -1,0 +1,8 @@
+rofi.theme: /usr/share/rofi/themes/Arc-Dark-Dropdown.rasi
+rofi.modi: window,drun,run,ssh,power:~/.config/rofi/scripts/power.sh
+rofi.icon-theme: "Numix-Circle"
+configuration {
+	modi: "window,drun,run";
+	icon-theme: "Numix-Circle";
+	font: "JetBrains-Mono";
+}
