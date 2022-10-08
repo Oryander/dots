@@ -3,6 +3,7 @@
 	<!-- The root menu. -->
     <RootMenu onroot="1">
         <Program icon="utilities-terminal" label="Terminal">alacritty</Program>
+        
         <Menu icon="folder" label="Utilities">
             <Program icon="font" label="Fonts">xfontsel</Program>
             <Program icon="info" label="Window Properties">
@@ -12,14 +13,16 @@
                 xwininfo | xmessage -file -
             </Program>
         </Menu>
+        
         <Menu icon="folder" label="General config">
         	<Program label="Qt5">qt5ct</Program>
         	<Program label="GTK">lxappearance</Program>
         </Menu>
+        
         <Menu icon="folder" label="JWM Config">
         	<Program label="Main">config -jwm</Program>
         	<Program label="Desktops">config -jwm desktops</Program>
-        	<Program label="Groups">config -jwm groups</Program>
+        	<Program label="Groups">config -jwm groupgen.vsh</Program>
         	<Program label="Keys">config -jwm keygen.vsh</Program>
         	<Program label="Menus">config -jwm menus</Program>
         	<Program label="Mouse">config -jwm mouse</Program>
@@ -27,18 +30,25 @@
         	<Program label="Trays">config -jwm trays</Program>
         	<Program label="Startup">config -jwm startup</Program>
         </Menu>
+        
         <Separator/>
-        <!-- <Program icon="lock" label="Lock">xscreensaver-command -lock</Program>
-        <Separator/> -->
+        
         <Restart label="Restart" icon="reload"/>
         <Program label="Exit">rofi -show power</Program>
         <!-- <Exit label="Exit" confirm="true" icon="exit"/> -->
     </RootMenu>
+    
     <RootMenu onroot="2">
     	<Move label="Move"/>
     	<Resize label="Resize"/>
+    	
 		<Separator/>
+		
     	<Close label="Close"/>
     	<Kill label="Kill"/>
+    	
+    	<Seperator/>
+    	
+    	<SendTo/>
     </RootMenu>
 </JWM>

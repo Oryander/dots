@@ -1,11 +1,14 @@
 module jwm
 
 const(
+	//Standard spacing for XML.
 	tab = '    '
 )
 
+//General type representing any XML tag.
 pub type XMLTag = SimpleTag | Tag | ComplexTag
 
+//Function returing a string representation for a given XML tag. Simply calls the .str() function on the correct subtype.
 fn (mut tag XMLTag) str() string {
 	return if tag is SimpleTag {
 		(tag as SimpleTag).str()
@@ -23,6 +26,13 @@ fn (mut tag XMLTag) as_complex() ComplexTag {
 	return tag as ComplexTag
 }
 
+//A simple XML tag in the format 
+//```XML
+//	**<Name prop=value/>**
+//```
+//**name**: Name of the tag.
+//**properties**: Properties to be placed inside the <> of the tag.
+//**indent**: How far to indent the tag. Configured automatically.
 pub struct SimpleTag {
 	name string [required]
 	properties map[string]string
@@ -50,6 +60,12 @@ fn (tag SimpleTag) str() string {
 	return tag.indent('<$tag.properties()/>')
 }
 
+//An XML tag in the format 
+//```XML
+//	**<Name prop=val>value</Name>**
+//```
+//**SimpleTag**: Embeded SimpleTag struct to handle name and properties.
+//**value**: Value to be placed between the opening and close of the tag.
 pub struct Tag {
 	SimpleTag
 	value string
@@ -59,6 +75,14 @@ fn (tag Tag) str() string {
 	return tag.indent('<$tag.properties()>$tag.value</$tag.name>')
 }
 
+//A complex XML tag in the form
+//```XML
+//	<Name prop=val>
+//	...
+//	</Name>
+//```
+//**SimpleTag**: Embeded SimpleTag struct to handle name and properties.
+//**children**: Array of sub-tags.
 pub struct ComplexTag {
 	SimpleTag
 mut:
@@ -75,18 +99,31 @@ fn (mut tag ComplexTag) str() string {
 	return line1 + lines + last_line
 }
 
+//**name**: string representing the name of the tag.
+//**properties**: map[string]string representing the properties of the tag.
+//Returns a SimpleTag with the given name and properties as an instance of the XMLTag data type.
 pub fn simple_tag(name string, properties map[string]string) XMLTag {
 	return SimpleTag{name, properties, 1}
 }
 
+//**name**: string representing the name of the tag.
+//**value**: string representing the value of the tag.
+//**properties**: map[string]string representing the properties of the tag.
+//Returns a Tag with the given name, value, and properties as an instance of the XMLTag data type.
 pub fn tag(name string, value string, properties map[string]string) XMLTag {
 	return Tag{SimpleTag{name, properties, 1}, value}
 }
 
+//**name**: string representing the name of the tag.
+//**properties**: map[string]string representing the properties of the tag.
+//**children**: varargs string representing the children of the tag.
+//Returns a ComplexTag with the given name, properties, and children as an instance of the XMLTag data type.
 pub fn complex_tag(name string, properties map[string]string, children ...XMLTag) XMLTag {
 	return ComplexTag{SimpleTag{name, properties, 1}, children}
 }
 
+//**tags**: varargs XMLTag representing the tags in this JWM config file.
+//Prints the necessary boilerplate to be a valid JWM config file, along with all of the given tags.
 pub fn jwm(tags ...XMLTag) {
 	println('<?xml version="1.0"?>')
 	mut wm := ComplexTag{SimpleTag{'JWM', {}, 0}, tags}
