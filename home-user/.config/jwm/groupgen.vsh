@@ -27,5 +27,6 @@ jwm(
 	group([ class('librewolf-default'), option('icon:amarok-icon-jwm.png') ]),
 	group([ class('firefox'), option('icon:firefox-4.0-jwm.png') ]),
 	group([ name('Alacritty'), option('icon:alacritty-jwm.png') ]),
-	group([ name('MultiMC'), option('icon:multimc-jwm.png') ])
+	group([ name('MultiMC'), option('icon:multimc-jwm.png') ]),
+	group([ name('obsidian'), option('icon:/home/oryander/Pictures/obsidian-jwm.png') ])
 )

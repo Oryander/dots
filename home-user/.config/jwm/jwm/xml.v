@@ -40,9 +40,9 @@ mut:
 	indent u8
 }
 
-fn (tag SimpleTag) indent(str string) string {
+fn (tag SimpleTag) indent(str string, add int) string {
 	mut result := ''
-	for i := 0; i < tag.indent; i++ {
+	for i := 0; i < tag.indent + add; i++ {
 		result += tab
 	}
 	return result + str
@@ -57,7 +57,7 @@ fn (tag SimpleTag) properties() string {
 }
 
 fn (tag SimpleTag) str() string {
-	return tag.indent('<$tag.properties()/>')
+	return tag.indent('<$tag.properties()/>', 0)
 }
 
 //An XML tag in the format 
@@ -72,7 +72,7 @@ pub struct Tag {
 }
 
 fn (tag Tag) str() string {
-	return tag.indent('<$tag.properties()>$tag.value</$tag.name>')
+	return tag.indent('<$tag.properties()>$tag.value</$tag.name>', 0)
 }
 
 //A complex XML tag in the form
@@ -90,12 +90,12 @@ mut:
 }
 
 fn (mut tag ComplexTag) str() string {
-	line1 := tag.indent('<$tag.properties()>')
+	line1 := tag.indent('<$tag.properties()>', 0)
 	mut lines := ''
 	for mut x in tag.children {
-		lines += '\n' + tag.indent(x.str())
+		lines += '\n' + tag.indent(x.str(), x.indent)
 	}
-	last_line := '\n' + tag.indent('</$tag.name>')
+	last_line := '\n' + tag.indent('</$tag.name>', 0)
 	return line1 + lines + last_line
 }
 

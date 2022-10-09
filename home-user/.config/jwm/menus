@@ -6,8 +6,8 @@
         
         <Menu icon="folder" label="Utilities">
             <Program icon="font" label="Fonts">xfontsel</Program>
-            <Program icon="info" label="Window Properties">
-                xprop | xmessage -file -
+            <Program icon="info" label="Window Class">
+                xprop | grep "WM_CLASS" | xmessage -file -
             </Program>
             <Program icon="info" label="Window Information">
                 xwininfo | xmessage -file -
@@ -47,7 +47,7 @@
     	<Close label="Close"/>
     	<Kill label="Kill"/>
     	
-    	<Seperator/>
+    	<Separator/>
     	
     	<SendTo/>
     </RootMenu>

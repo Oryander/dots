@@ -2,4 +2,6 @@
 picom -b
 xrandr --output HDMI-A-0 --set TearFree on
 kdeconnect-indicator
-./home/oryander/Programs/wired-notify/target/release/wired &
+killall wired
+cd /home/oryander/Programs/wired-notify/target/release/
+./wired &

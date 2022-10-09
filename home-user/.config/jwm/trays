@@ -25,6 +25,6 @@
         <TrayButton icon="gnome-boxes-jwm.png" popup="Gnome boxes">exec:gnome-boxes</TrayButton>
         <!-- Run VSCodium from a custom script -->
 		<TrayButton icon="vscodium.png" popup="VSCodium">exec:vscodium</TrayButton>
-		<TrayButton icon="multimc-jwm.png" popup="MultiMC">exec:multimc</TrayButton>
+		<TrayButton icon="multimc-jwm.png" popup="MultiMC">exec:/opt/multimc/run.sh</TrayButton>
     </Tray>
 </JWM>
