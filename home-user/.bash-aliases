@@ -1,0 +1,27 @@
+alias connect="hotspotshield connect"
+alias vpnstat="pipe 'hotspotshield status' in-box"
+alias disconnect="hotspotshield disconnect"
+
+alias apt-i="sudo apt install"
+alias apt-up="sudo apt update && sudo apt upgrade"
+alias get-i="sudo apt-get install"
+alias pip-i="pip install"
+alias snap-i="snap install"
+alias apt-rm="sudo apt remove"
+alias apt-purge="sudo apt purge"
+alias v-i="v install"
+
+alias ping-d="ping startpage.com"
+alias list="ls -lah"
+alias refresh="echo 'refreshed .bashrc' && source ~/.bashrc"
+alias py="echo 'launched python from alias' && python3"
+alias farmsay="cowsay -f $(ls /usr/share/cowsay/cows | shuf -n 1)"
+
+alias farm-fortune="fortune | farmsay"
+alias dogefarm="doge | farmsay"
+alias box-fortune="pipe fortune in-box"
+
+alias up="cd .."
+alias up2="up && up"
+
+alias sdown="shutdown now"

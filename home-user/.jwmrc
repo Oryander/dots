@@ -16,7 +16,8 @@
     <!-- Virtual Desktops -->
     <Include>$HOME/.config/jwm/desktops</Include>
     <!-- Mouse bindings -->
-    <Include>$HOME/.config/jwm/mouse</Include> 
+    <!-- <Include>$HOME/.config/jwm/mouse</Include> -->
+    <Include>exec:$HOME/.config/jwm/mousegen</Include>
 
     <!-- The focus model (sloppy or click) -->
     <FocusModel>click</FocusModel>

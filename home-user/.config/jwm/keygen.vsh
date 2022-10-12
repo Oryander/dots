@@ -5,6 +5,7 @@ import jwm
 //
 
 const(
+	//builtin commands
 	up = 'up'
 	down = 'down'
 	left = 'left'
@@ -13,6 +14,7 @@ const(
 	escape = 'escape'
 	next_stacked = 'nextstacked'
 	close = 'close'
+	desktop_n = 'desktop#'
 	root_1 = 'root:1'
 	root_2 = 'root:2'
 	window = 'window'
@@ -55,7 +57,7 @@ keys := {
 	'A-F1': root_1
 	'A-F2': window
 	'A-F4': close
-	'A-#': 'desktop#' //# is a special case that can represent any number, so it is not in const
+	'A-#': desktop_n
 	'A-x': close
 	'A-m': minimize
 	'A-v': maximize
